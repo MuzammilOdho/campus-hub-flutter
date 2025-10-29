@@ -1,6 +1,6 @@
 # Campus Hub 🎓
 
-A production-ready resource-sharing platform for Mehran University (MUET) students, built with Flutter and Spring Boot.
+A resource-sharing platform for University students, built with Flutter and Spring Boot.
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-3.0+-blue.svg)](https://dart.dev/)
@@ -25,10 +25,10 @@ Campus Hub enables students to share resources like books, lab equipment, electr
 
 <table>
   <tr>
-    <td><img src="docs/screenshots/login.png" alt="Login" width="200"/></td>
-    <td><img src="docs/screenshots/browse.png" alt="Browse" width="200"/></td>
-    <td><img src="docs/screenshots/detail.png" alt="Detail" width="200"/></td>
-    <td><img src="docs/screenshots/requests.png" alt="Requests" width="200"/></td>
+    <td><img src="screenshots/login.png" alt="Login" width="200"/></td>
+    <td><img src="screenshots/browse.png" alt="Browse" width="200"/></td>
+    <td><img src="screenshots/detail.png" alt="Detail" width="200"/></td>
+    <td><img src="screenshots/requests.png" alt="Requests" width="200"/></td>
   </tr>
 </table>
 
@@ -54,14 +54,8 @@ Campus Hub enables students to share resources like books, lab equipment, electr
    ```bash
    flutter pub get
    ```
-
-3. **Start the backend** (in a separate terminal)
-   ```bash
-   cd Backend
-   mvn spring-boot:run
-   ```
-
-4. **Run the app**
+   
+3. **Run the app**
    ```bash
    flutter run
    ```
@@ -104,8 +98,6 @@ campus_hub/
 │       ├── widgets/              # Reusable widgets
 │       │   └── common_widgets.dart
 │       └── app_router.dart       # Navigation configuration
-├── Backend/                      # Spring Boot backend
-│   └── src/main/java/
 ├── test/                         # Unit tests
 ├── pubspec.yaml                  # Flutter dependencies
 └── README.md                     # This file
@@ -195,48 +187,8 @@ Or use dart-define:
 flutter run --dart-define=API_BASE_URL=http://your-backend-url
 ```
 
-### Backend Configuration
 
-Configure `application.properties`:
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/campus_hub
-spring.datasource.username=your_username
-spring.datasource.password=your_password
 
-# Email service
-spring.mail.host=smtp.gmail.com
-spring.mail.port=587
-spring.mail.username=your_email@gmail.com
-spring.mail.password=your_app_password
-
-# Cloudinary
-cloudinary.cloud_name=your_cloud_name
-cloudinary.api_key=your_api_key
-cloudinary.api_secret=your_api_secret
-```
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-flutter test
-
-# Run with coverage
-flutter test --coverage
-
-# Analyze code
-flutter analyze
-
-# Check formatting
-flutter format --set-exit-if-changed lib/
-```
-
-## 📚 Documentation
-
-- [QUICK_START.md](QUICK_START.md) - Setup and user guide
-- [REFACTOR_SUMMARY.md](REFACTOR_SUMMARY.md) - Architecture and refactor details
-- [API_VERIFICATION.md](API_VERIFICATION.md) - Backend integration verification
-- [REMOVED_LEGACY_FILES.md](REMOVED_LEGACY_FILES.md) - Cleanup history
 
 ## 🤝 Contributing
 
@@ -248,47 +200,9 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📋 Roadmap
-
-- [ ] Push notifications for requests and returns
-- [ ] In-app chat between users
-- [ ] User ratings and reviews
-- [ ] Dark mode support
-- [ ] Advanced analytics dashboard
-- [ ] QR code scanning for quick resource lookup
-- [ ] Offline mode with sync
-- [ ] Multi-language support
-
-## 🐛 Known Issues
-
-- Images are required for resource upload (future: make optional)
-- No offline support yet
-- Single image per resource (future: multiple images)
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Authors
-
-- **Development Team** - Mehran University of Engineering & Technology
-
-## 🙏 Acknowledgments
-
-- Mehran University (MUET) for supporting student initiatives
-- Flutter and Spring Boot communities for excellent documentation
-- All contributors and testers
-
-## 📞 Support
-
-For issues, questions, or feature requests:
-- Open an issue on GitHub
-- Check the documentation files
-- Review backend and frontend logs
-
----
-
-**Made with ❤️ for the MUET community**
-
-🎓 Share knowledge, share resources, build community!
 
